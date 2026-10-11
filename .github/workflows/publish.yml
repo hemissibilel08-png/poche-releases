@@ -1,0 +1,81 @@
+name: Publish Poche
+on:
+  push:
+    branches: [main]
+    paths: ['incoming/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: poche-public-releases
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: true
+      - name: Verify archive and signatures with the pinned public key
+        id: version
+        run: python3 verify_distribution.py incoming
+      - name: Publish or verify the immutable release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh api --paginate "repos/$GH_REPO/releases?per_page=100" --jq '.[].tag_name' > "$RUNNER_TEMP/tags"
+          if ! grep -Fxq "$TAG" "$RUNNER_TEMP/tags"; then
+            cat > "$RUNNER_TEMP/notes.md" <<'NOTES'
+          Téléchargez **Poche.zip**, décompressez puis ouvrez **Poche.app**. Aucun script à lancer.
+
+          **Mac Apple Silicon · macOS 13 ou ultérieur.**
+
+          Les mises à jour suivantes sont téléchargées et vérifiées automatiquement. Poche attend un moment calme pour redémarrer ; vos paniers sont conservés.
+
+          L'application reste dans un dossier inscriptible avec son dossier Poche-data. Cette version est signée localement, sans notarisation Apple : macOS peut demander une autorisation lors de la première ouverture.
+
+          Seuls l'application et ses fichiers de distribution sont publics. Les sources de Poche sont privées.
+          NOTES
+            gh release create "$TAG" incoming/Poche.zip incoming/Poche.zip.sha256 \
+              --target "$GITHUB_SHA" --title "Poche $VERSION" --notes-file "$RUNNER_TEMP/notes.md" --latest
+          fi
+          mkdir "$RUNNER_TEMP/downloaded"
+          gh release download "$TAG" --pattern Poche.zip --dir "$RUNNER_TEMP/downloaded"
+          cmp incoming/Poche.zip "$RUNNER_TEMP/downloaded/Poche.zip"
+      - name: Advance the signed feed only after the ZIP is downloadable
+        env:
+          BUILD: ${{ steps.version.outputs.build }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          cp incoming/appcast.xml "$RUNNER_TEMP/appcast.xml"
+          cp incoming/manifest.json "$RUNNER_TEMP/manifest.json"
+          git config user.name 'Poche releases'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin updates > /dev/null; then
+            git fetch origin updates:refs/remotes/origin/updates
+            git switch --track origin/updates
+            OLD_BUILD=$(python3 -c 'import json; print(json.load(open("manifest.json"))["build"])')
+            if [ "$OLD_BUILD" -gt "$BUILD" ]; then
+              echo 'A newer feed is already published; refusing downgrade.'
+              exit 0
+            fi
+          else
+            git switch --orphan updates
+          fi
+          cp "$RUNNER_TEMP/appcast.xml" appcast.xml
+          cp "$RUNNER_TEMP/manifest.json" manifest.json
+          git add -- appcast.xml manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update feed for Poche $VERSION"
+            git push origin HEAD:updates
+          fi
+          printf 'Poche %s publié : https://github.com/%s/releases/latest\n\nFlux signé mis à jour après vérification du téléchargement.\n' "$VERSION" "$GITHUB_REPOSITORY" >> "$GITHUB_STEP_SUMMARY"
