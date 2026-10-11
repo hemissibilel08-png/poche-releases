@@ -34,13 +34,13 @@ jobs:
           gh api --paginate "repos/$GH_REPO/releases?per_page=100" --jq '.[].tag_name' > "$RUNNER_TEMP/tags"
           if ! grep -Fxq "$TAG" "$RUNNER_TEMP/tags"; then
             cat > "$RUNNER_TEMP/notes.md" <<'NOTES'
-          Téléchargez **Poche.zip**, décompressez puis ouvrez **Poche.app**. Aucun script à lancer.
+          Téléchargez **Poche.zip**, décompressez, placez **Poche.app** dans **Applications** puis ouvrez-la. Aucun script à lancer.
 
           **Mac Apple Silicon · macOS 13 ou ultérieur.**
 
           Les mises à jour suivantes sont téléchargées et vérifiées automatiquement. Poche attend un moment calme pour redémarrer ; vos paniers sont conservés.
 
-          L'application reste dans un dossier inscriptible avec son dossier Poche-data. Cette version est signée localement, sans notarisation Apple : macOS peut demander une autorisation lors de la première ouverture.
+          Installez l'app dans Applications, hors d'un dossier iCloud. Les paniers sont conservés séparément dans Application Support/Poche. Cette version est signée localement, sans notarisation Apple : macOS peut demander une autorisation lors de la première ouverture.
 
           Seuls l'application et ses fichiers de distribution sont publics. Les sources de Poche sont privées.
           NOTES
