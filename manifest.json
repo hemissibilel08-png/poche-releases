@@ -1,7 +1,7 @@
 {
-  "version": "0.6.2",
-  "build": 8,
-  "sha256": "988799dbdfbf425d0bc73781ba857f2b0287e9685e6b2f53dc83824e4f476b99",
-  "signature": "N6qZyo5ubOraQy7Gqo7P7N6GNR8TfF2caPCiCo0Mys3cgE5oTVLzMQVHI8ft1m8Tr66INSsvvzzgKOrs9pUqBw==",
-  "length": 1292769
+  "version": "0.7.0",
+  "build": 9,
+  "sha256": "0a6011b79cf0250bb5812168ce23a1e4988a4d83ec251b1e5a260deeca514c30",
+  "signature": "4DWtrmrTYuT8eLeNIItytJarAPFEeSbJSbj61ymfkgSqFKmiKdB8er7yD4062EpG5/pbZLnSygeLSfHAwLrADg==",
+  "length": 1374666
 }
