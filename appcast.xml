@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Poche</title>
+    <link>https://github.com/hemissibilel08-png/poche-releases</link>
+    <description>Mises à jour signées de Poche pour macOS.</description>
+    <item>
+      <title>Poche 0.6.0</title>
+      <pubDate>Sun, 11 Oct 2026 23:07:36 +0000</pubDate>
+      <sparkle:version>6</sparkle:version>
+      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>Améliorations et corrections de Poche. Installation automatique au repos, paniers conservés.</description>
+      <enclosure url="https://github.com/hemissibilel08-png/poche-releases/releases/download/v0.6.0/Poche.zip" length="1282231" type="application/octet-stream" sparkle:edSignature="dzP9Ox2W65D40/OmNSRVIyzRwVF5Y/0gcXiacdrgORXuKvE0CVXWsjVPHapNGHVa09dHfjWXJrnONWihqGgcBQ=="></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: Zz8czVT/GGWKwX1D4ibt15Miozt64qPHVXzHZfKGk6VZ9qoCfxkcq9MQOjuOH5/HFapTMk8Pb5sqar1TaVN0AA==
+length: 1289
+-->
