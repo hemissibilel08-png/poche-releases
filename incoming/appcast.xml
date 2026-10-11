@@ -6,16 +6,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <link>https://github.com/hemissibilel08-png/poche-releases</link>
     <description>Mises à jour signées de Poche pour macOS.</description>
     <item>
-      <title>Poche 0.6.0</title>
-      <pubDate>Sun, 11 Oct 2026 23:07:36 +0000</pubDate>
-      <sparkle:version>6</sparkle:version>
-      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+      <title>Poche 0.6.1</title>
+      <pubDate>Sun, 11 Oct 2026 23:15:51 +0000</pubDate>
+      <sparkle:version>7</sparkle:version>
+      <sparkle:shortVersionString>0.6.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <description>Améliorations et corrections de Poche. Installation automatique au repos, paniers conservés.</description>
-      <enclosure url="https://github.com/hemissibilel08-png/poche-releases/releases/download/v0.6.0/Poche.zip" length="1282231" type="application/octet-stream" sparkle:edSignature="dzP9Ox2W65D40/OmNSRVIyzRwVF5Y/0gcXiacdrgORXuKvE0CVXWsjVPHapNGHVa09dHfjWXJrnONWihqGgcBQ=="></enclosure>
+      <enclosure url="https://github.com/hemissibilel08-png/poche-releases/releases/download/v0.6.1/Poche.zip" length="1291914" type="application/octet-stream" sparkle:edSignature="VQ5zz18jf66X0gEHjIY8aQ6HkonLDSJraO328BYeVbj+u1NaBnmSIBvaZKGU6zAHDuNdeHk3qNiMvRWWKCu4DQ=="></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Zz8czVT/GGWKwX1D4ibt15Miozt64qPHVXzHZfKGk6VZ9qoCfxkcq9MQOjuOH5/HFapTMk8Pb5sqar1TaVN0AA==
+edSignature: mUzskrslncouVcGfjWyOPBYNf52JeFbtg0uYevG7Ok8irOwGXQNDCzPqXhWmrZFGVMrNwvU565Rt5rh6BAzgAQ==
 length: 1289
 -->
