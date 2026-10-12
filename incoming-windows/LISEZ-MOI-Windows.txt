@@ -5,7 +5,7 @@ Ouvrez Poche-Windows-x64.exe. Le runtime .NET est inclus. Poche se place automat
 UTILISATION
 - Déposez des fichiers, dossiers, liens ou du texte dans la poche.
 - Glissez directement la pile pour récupérer tous les éléments. Cliquez sur la pastille pour les sélectionner individuellement.
-- La poignée centrée pulse doucement : glissez pour déplacer, double-cliquez pour ranger au bord. Cliquez sur l’onglet pour rouvrir.
+- Tout le haut de la poche se glisse pour la déplacer (sauf les deux boutons). La poignée centrée pulse doucement. Double-cliquez dans cette zone pour ranger au bord. Cliquez sur l’onglet pour rouvrir.
 - Secouez un fichier dans l’Explorateur pendant son déplacement : la poche apparaît à côté, après le geste. Ctrl+Alt+Espace crée aussi une poche.
 - Retrouvez les poches dans l’icône de la zone de notification (éventuellement derrière le chevron de Windows).
 - Le menu de cette icône propose l’ouverture à la connexion et la recherche de mises à jour.
@@ -31,3 +31,6 @@ Activées par défaut : vérification au lancement puis toutes les 6 heures, té
 Les anciennes versions beta.1/beta.2 nécessitent un dernier téléchargement manuel pour disposer de ce mécanisme.
 
 Compilation et tests exécutés sous Windows sur GitHub Actions. Le ressenti du glisser-déposer, les écrans de résolutions différentes et les gestes de l’Explorateur restent à valider sur les PC des testeurs.
+
+CORRECTIONS BÊTA 5
+Zone de déplacement élargie, apparition directement au bon endroit, transition vers le bord dans la même fenêtre, animation calée sur les images affichées et menu sombre sans bande blanche. Le contour de dépôt ne décale plus les éléments.
