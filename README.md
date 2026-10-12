@@ -1,8 +1,20 @@
-# Poche pour macOS
-
-[**Télécharger Poche.zip**](https://github.com/hemissibilel08-png/poche-releases/releases/latest/download/Poche.zip)
+# Poche — macOS et bêta Windows
 
 Un petit panier flottant pour garder vos fichiers à portée de main.
+
+## Windows 11 x64 — bêta
+
+[**Télécharger la bêta Windows**](https://github.com/hemissibilel08-png/poche-releases/releases?q=windows-v&expanded=true) — choisissez `Poche-Windows-x64.exe` dans la version la plus récente. Aucun script ni installation de .NET nécessaire.
+
+Poches persistantes, glisser-déposer, secousse dans l’Explorateur, poignée lumineuse, rangement animé au bord, menu de notification et démarrage à la connexion. L’interface reprend les proportions compactes et le parcours Magic Links du Mac.
+
+Pour les Magic Links, importez une fois le fichier `.poche-access` remis **en privé** par Bilel : menu de la poche → « Activer les Magic Links… ». Ne publiez pas ce fichier. Tous les testeurs Mac et Windows partagent un plafond serveur de **8 Go**, avec moins de 1 Go par envoi. Mot de passe, expiration et usage unique sont disponibles.
+
+Cette bêta Intel/AMD n’a pas de signature Authenticode commerciale ; Windows peut afficher un avertissement de réputation. Les futures versions sont publiées automatiquement ici, mais leur installation sous Windows reste manuelle. Les tests automatisés sont exécutés sous Windows ; les gestes et les configurations à plusieurs écrans restent à éprouver sur les PC des testeurs.
+
+## macOS
+
+[**Télécharger Poche.zip**](https://github.com/hemissibilel08-png/poche-releases/releases/latest/download/Poche.zip)
 
 **Mac Apple Silicon · macOS 13 ou ultérieur.** Décompressez le ZIP, placez Poche.app dans Applications puis ouvrez-la. Aucun script à lancer.
 
