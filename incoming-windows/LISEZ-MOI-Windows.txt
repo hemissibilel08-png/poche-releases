@@ -34,3 +34,6 @@ Compilation et tests exécutés sous Windows sur GitHub Actions. Le ressenti du 
 
 CORRECTIONS BÊTA 5
 Zone de déplacement élargie, apparition directement au bon endroit, transition vers le bord dans la même fenêtre, animation calée sur les images affichées et menu sombre sans bande blanche. Le contour de dépôt ne décale plus les éléments.
+
+CORRECTIONS BÊTA 6
+Après un envoi réussi, la poche revient au format compact et la confirmation garde une largeur fixe de 200 points. La liste dépliée est limitée à 288 points ; sa hauteur suit le nombre de fichiers. Les noms longs sont tronqués à l’écran et restent visibles au survol. Une annulation revient à la vue précédente.
