@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0-beta.1",
+  "tag": "windows-v0.1.0-beta.1",
+  "build": 1,
+  "source": "7be5c0ac724c3f89140386bfa79996f545f5def2",
+  "assets": {
+    "Poche-Windows-x64.exe": {
+      "length": 75442747,
+      "sha256": "7cfb7093400ce9f67da6903c890d86ef9d8c91719d81f419c3eac9e0ebb6db58",
+      "signature": "y6q5qKZ3lwNZo1s+nhhhiw0ogiNpoQjfOGcyy/upQO7KUMTh2TcB8OM7UZWOE8SNJXeXWm1TlXr9ydjb5i2cAg=="
+    },
+    "LISEZ-MOI-Windows.txt": {
+      "length": 3232,
+      "sha256": "ce9dcac6f30b6d64bfde5221938566a5ab201b388b3ba637350162954ecbfb24",
+      "signature": "20rx5nljy3ix6Fpu3vUaroGSnmHUHJi7cYXgIX65Q96mrmvetFa14KrqSc+YemYttYxFD4NlKhljyuhl2Eg/Bw=="
+    },
+    "Poche-Windows-apercu.png": {
+      "length": 31335,
+      "sha256": "20e62d3abd415c6af3c3a88ff3ec8848ae38ebc7f34221fb1a0815e02a610877",
+      "signature": "HHcAAvvlRcTUlxVOeXnf9B0fPz9LzXzhrfbxRAm13XszkeTApTLRvR7ggAlaeWwE2Cdb0n2sNf4ZqKcaR17xDA=="
+    }
+  }
+}

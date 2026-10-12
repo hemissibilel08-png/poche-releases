@@ -1,0 +1,29 @@
+POCHE — BÊTA WINDOWS 11 x64
+
+Ouvrez Poche-Windows-x64.exe. Le runtime .NET est inclus. Placez l’exe dans un dossier stable si vous activez le démarrage à la connexion.
+
+UTILISATION
+- Déposez des fichiers, dossiers, liens ou du texte dans la poche.
+- Glissez directement la pile pour récupérer tous les éléments. Cliquez sur la pastille pour les sélectionner individuellement.
+- La poignée centrée pulse doucement : glissez pour déplacer, double-cliquez pour ranger au bord. Cliquez sur l’onglet pour rouvrir.
+- Secouez un fichier dans l’Explorateur pendant son déplacement : la poche apparaît à côté, après le geste. Ctrl+Alt+Espace crée aussi une poche.
+- Retrouvez les poches dans l’icône de la zone de notification (éventuellement derrière le chevron de Windows).
+- Le menu de cette icône propose l’ouverture à la connexion et le téléchargement des bêtas suivantes.
+
+MAGIC LINKS
+Dans le menu de la poche : « Activer les Magic Links… », puis sélectionnez le fichier .poche-access envoyé séparément par Bilel. Il peut aussi être déposé sur une poche vide. Cet accès est enregistré chiffré pour votre compte Windows via DPAPI.
+Ne publiez pas ce fichier d’accès et ne le joignez pas à une release GitHub. Il autorise les envois sur le stockage commun des testeurs. Le fichier de configuration n’est pas intégré dans l’exe public.
+
+Ensuite : menu de la poche → Créer un Magic Link. Choisissez titre, mot de passe facultatif (8 caractères minimum), expiration (1 heure / 24 heures / 3 jours / 7 jours), et éventuellement usage unique. Après envoi, le lien est copié et la confirmation propose Ouvrir.
+
+Moins de 1 Go par envoi. 8 Go au total partagés entre Mac et Windows, envois en cours inclus. Le serveur réserve la place de manière atomique ; le quota est commun à tous les testeurs. L’app refuse l’envoi si le quota est plein. 100 créations maximum par jour au total. Les fichiers expirés sont nettoyés par le service.
+
+« Mes liens partagés » montre les liens créés sur ce PC et permet de les supprimer. Usage unique signifie une session avec reprise pendant 2 heures maximum. Le mot de passe protège l’accès ; il ne chiffre pas les fichiers de bout en bout. Une copie téléchargée ne peut pas être rappelée.
+
+DONNÉES
+Les poches et l’historique sont dans %LOCALAPPDATA%\Poche, indépendamment de l’exe. Retirer un élément de la poche ne supprime jamais son fichier original. Les glissements sortants proposent une copie. Les liens symboliques et jonctions ne sont pas inclus dans les envois.
+
+ÉTAT DE LA BÊTA
+Cette version cible Windows 11 x64 (Intel/AMD), pas Windows ARM64. Elle n’a pas de signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Ne désactivez pas l’antivirus pour l’utiliser. Les mises à jour Windows sont pour l’instant téléchargées depuis le menu ; l’installation automatique macOS reste propre au client Mac.
+
+Compilation et tests exécutés sous Windows sur GitHub Actions. Le ressenti du glisser-déposer, les écrans de résolutions différentes et les gestes de l’Explorateur restent à valider sur les PC des testeurs.
