@@ -1,6 +1,6 @@
 POCHE — BÊTA WINDOWS 11 x64
 
-Ouvrez Poche-Windows-x64.exe. Le runtime .NET est inclus. Placez l’exe dans un dossier stable si vous activez le démarrage à la connexion.
+Ouvrez Poche-Windows-x64.exe. Le runtime .NET est inclus. Poche se place automatiquement dans %LOCALAPPDATA%\Poche\App, sans droits administrateur.
 
 UTILISATION
 - Déposez des fichiers, dossiers, liens ou du texte dans la poche.
@@ -8,7 +8,7 @@ UTILISATION
 - La poignée centrée pulse doucement : glissez pour déplacer, double-cliquez pour ranger au bord. Cliquez sur l’onglet pour rouvrir.
 - Secouez un fichier dans l’Explorateur pendant son déplacement : la poche apparaît à côté, après le geste. Ctrl+Alt+Espace crée aussi une poche.
 - Retrouvez les poches dans l’icône de la zone de notification (éventuellement derrière le chevron de Windows).
-- Le menu de cette icône propose l’ouverture à la connexion et le téléchargement des bêtas suivantes.
+- Le menu de cette icône propose l’ouverture à la connexion et la recherche de mises à jour.
 
 MAGIC LINKS
 Dans le menu de la poche : « Activer les Magic Links… », puis sélectionnez le fichier .poche-access envoyé séparément par Bilel. Il peut aussi être déposé sur une poche vide. Cet accès est enregistré chiffré pour votre compte Windows via DPAPI.
@@ -24,6 +24,10 @@ DONNÉES
 Les poches et l’historique sont dans %LOCALAPPDATA%\Poche, indépendamment de l’exe. Retirer un élément de la poche ne supprime jamais son fichier original. Les glissements sortants proposent une copie. Les liens symboliques et jonctions ne sont pas inclus dans les envois.
 
 ÉTAT DE LA BÊTA
-Cette version cible Windows 11 x64 (Intel/AMD), pas Windows ARM64. Elle n’a pas de signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Ne désactivez pas l’antivirus pour l’utiliser. Les mises à jour Windows sont pour l’instant téléchargées depuis le menu ; l’installation automatique macOS reste propre au client Mac.
+Cette version cible Windows 11 x64 (Intel/AMD), pas Windows ARM64. Elle n’a pas de signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Ne désactivez pas l’antivirus pour l’utiliser.
+
+MISES À JOUR AUTOMATIQUES
+Activées par défaut : vérification au lancement puis toutes les 6 heures, téléchargement en arrière-plan et signature Ed25519 vérifiée. Poche attend 30 secondes sans interaction et la fin des envois, formulaires et fenêtres actives avant de redémarrer. Le remplacement de l’exe conserve une sauvegarde : si le démarrage échoue, l’ancienne version est restaurée. Les poches et l’accès Magic Links sont conservés. Le menu permet de désactiver l’automatisation.
+Les anciennes versions beta.1/beta.2 nécessitent un dernier téléchargement manuel pour disposer de ce mécanisme.
 
 Compilation et tests exécutés sous Windows sur GitHub Actions. Le ressenti du glisser-déposer, les écrans de résolutions différentes et les gestes de l’Explorateur restent à valider sur les PC des testeurs.
