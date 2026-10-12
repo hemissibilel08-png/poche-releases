@@ -1,13 +1,13 @@
 {
-  "version": "0.1.0-beta.1",
-  "tag": "windows-v0.1.0-beta.1",
-  "build": 1,
-  "source": "7be5c0ac724c3f89140386bfa79996f545f5def2",
+  "version": "0.1.0-beta.2",
+  "tag": "windows-v0.1.0-beta.2",
+  "build": 2,
+  "source": "a8804208f85c24894152ccf025dacbc8804d2162",
   "assets": {
     "Poche-Windows-x64.exe": {
-      "length": 75442747,
-      "sha256": "7cfb7093400ce9f67da6903c890d86ef9d8c91719d81f419c3eac9e0ebb6db58",
-      "signature": "y6q5qKZ3lwNZo1s+nhhhiw0ogiNpoQjfOGcyy/upQO7KUMTh2TcB8OM7UZWOE8SNJXeXWm1TlXr9ydjb5i2cAg=="
+      "length": 75443109,
+      "sha256": "36cd98b02482e80b97b5a702646ecf1cb9d9516d381af5aba2ed9b190e6c3e51",
+      "signature": "M7cU4z8e7esCTCPD+2K4/nbucUX3DQXb7hbco2cD7PtfLWWpp2sBdKCo0MyudX/Q73vLzYoJnX4CDRgrKj6SBQ=="
     },
     "LISEZ-MOI-Windows.txt": {
       "length": 3232,
@@ -15,9 +15,9 @@
       "signature": "20rx5nljy3ix6Fpu3vUaroGSnmHUHJi7cYXgIX65Q96mrmvetFa14KrqSc+YemYttYxFD4NlKhljyuhl2Eg/Bw=="
     },
     "Poche-Windows-apercu.png": {
-      "length": 31335,
-      "sha256": "20e62d3abd415c6af3c3a88ff3ec8848ae38ebc7f34221fb1a0815e02a610877",
-      "signature": "HHcAAvvlRcTUlxVOeXnf9B0fPz9LzXzhrfbxRAm13XszkeTApTLRvR7ggAlaeWwE2Cdb0n2sNf4ZqKcaR17xDA=="
+      "length": 31317,
+      "sha256": "25c774ee99c9e5a4801c918e5d57e2a33c98011c7d2ae7c584b50b41188ea708",
+      "signature": "IRe474JrAUf6E2rNLt6tOeKkqvel6ljzX7uCDkmxYoBvGmjTrxwBdpyGcNYBjuc3GIE3+7SyLywurtBXESETDA=="
     }
   }
 }
