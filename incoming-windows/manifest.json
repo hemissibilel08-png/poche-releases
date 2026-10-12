@@ -1,13 +1,13 @@
 {
-  "version": "0.1.0-beta.3",
-  "tag": "windows-v0.1.0-beta.3",
-  "build": 3,
-  "source": "4bd3a4ea7e8eb41cdcfe59b4d125532855ca0bb2",
+  "version": "0.1.0-beta.4",
+  "tag": "windows-v0.1.0-beta.4",
+  "build": 4,
+  "source": "6654438a8b86245cb79e2f49ca4eb3c93b12cd9d",
   "assets": {
     "Poche-Windows-x64.exe": {
-      "length": 75716177,
-      "sha256": "7654a97d05d6a684e770c333e86c0c0a916b6814b190f32730fb3d3515626caf",
-      "signature": "VRLNTs6HCIxGoCgb1dxYQuT6qBrVXKdlqvZaDVMVtNoNpEQb03rVPMsp2s51xoRiNUQoDg5zSeCT3C3mVnXkDw=="
+      "length": 78073812,
+      "sha256": "b3063077ec24e9a9a4ce9509b37cee60a3d3558490fbf23b534f5cdf9515c395",
+      "signature": "X869uBcrEeNZPvEPhj1QxKTU+mu5FNYggYGmlutcmmxhLDHJK6hTU0aAxbHyeZZ71nNgLz0KR3c3xo1Qb7E3Bw=="
     },
     "LISEZ-MOI-Windows.txt": {
       "length": 3714,
