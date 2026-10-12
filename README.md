@@ -10,7 +10,7 @@ Poches persistantes, glisser-déposer, secousse dans l’Explorateur, poignée l
 
 Pour les Magic Links, importez une fois le fichier `.poche-access` remis **en privé** par Bilel : menu de la poche → « Activer les Magic Links… ». Ne publiez pas ce fichier. Tous les testeurs Mac et Windows partagent un plafond serveur de **8 Go**, avec moins de 1 Go par envoi. Mot de passe, expiration et usage unique sont disponibles.
 
-Cette bêta Intel/AMD n’a pas de signature Authenticode commerciale ; Windows peut afficher un avertissement de réputation. Les futures versions sont publiées automatiquement ici, mais leur installation sous Windows reste manuelle. Les tests automatisés sont exécutés sous Windows ; les gestes et les configurations à plusieurs écrans restent à éprouver sur les PC des testeurs.
+Cette bêta Intel/AMD n’a pas de signature Authenticode commerciale ; Windows peut afficher un avertissement de réputation. Les mises à jour sont téléchargées, authentifiées et installées automatiquement après un moment d’inactivité, avec restauration de l’ancienne version si le redémarrage échoue. Les poches et l’accès Magic Links restent conservés. Poche s’installe dans votre dossier utilisateur, sans administrateur. Les versions beta.1/beta.2 nécessitent un dernier téléchargement manuel pour activer ce mécanisme. Les tests automatisés sont exécutés sous Windows ; les gestes et les configurations à plusieurs écrans restent à éprouver sur les PC des testeurs.
 
 ## macOS
 
