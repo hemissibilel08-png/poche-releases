@@ -1,0 +1,50 @@
+name: Publish Windows beta
+on:
+  push:
+    branches: [main]
+    paths: ['incoming-windows/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: poche-windows-public-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Verify the Windows executable and its pinned signature
+        id: version
+        run: python3 verify_windows.py incoming-windows
+      - name: Publish immutable Windows prerelease assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            cat > "$RUNNER_TEMP/notes.md" <<'NOTES'
+          **Bêta Windows 11 x64 (Intel/AMD).** Téléchargez **Poche-Windows-x64.exe** et ouvrez-le. .NET est inclus ; aucun script nécessaire.
+
+          Poche compacte, glisser-déposer entrant/sortant, secousse dans l’Explorateur, poignée lumineuse, rangement animé, poches persistantes, icône de notification et démarrage à la connexion.
+
+          Magic Links : activez une fois le partage avec le fichier `.poche-access` remis séparément par Bilel. Le quota de **8 Go est partagé** avec le Mac et les autres testeurs, moins de 1 Go par envoi. Expiration, mot de passe et usage unique sont disponibles. Aucun accès de stockage n’est intégré à l’exe public.
+
+          Les sources restent privées. Bêta sans signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Les mises à jour Windows se téléchargent depuis le menu ; l’installation automatique n’est pas encore incluse dans ce client.
+
+          Compilation et tests sur un runner Windows. Le rendu fourni est généré par WPF avec des fichiers artificiels ; les gestes réels et les écrans doivent être validés sur les PC des testeurs.
+          NOTES
+            gh release create "$TAG" incoming-windows/Poche-Windows-x64.exe incoming-windows/Poche-Windows-x64.exe.sha256 incoming-windows/LISEZ-MOI-Windows.txt incoming-windows/Poche-Windows-apercu.png --target "$GITHUB_SHA" --title "Poche Windows $VERSION" --notes-file "$RUNNER_TEMP/notes.md" --prerelease --latest=false
+          fi
+          gh release download "$TAG" --pattern Poche-Windows-x64.exe --dir "$RUNNER_TEMP/downloaded"
+          cmp incoming-windows/Poche-Windows-x64.exe "$RUNNER_TEMP/downloaded/Poche-Windows-x64.exe"
+          printf 'Bêta Windows publiée et téléchargement vérifié : https://github.com/%s/releases/tag/%s\n' "$GITHUB_REPOSITORY" "$TAG" >> "$GITHUB_STEP_SUMMARY"
