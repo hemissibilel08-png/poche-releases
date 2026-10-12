@@ -6,6 +6,8 @@ assert re.fullmatch(r'[a-f0-9]{40}',manifest['source'])
 assert set(manifest['assets'])=={'Poche-Windows-x64.exe','LISEZ-MOI-Windows.txt','Poche-Windows-apercu.png'}
 with tempfile.TemporaryDirectory() as d:
  p=pathlib.Path(d);(p/'public.der').write_bytes(bytes.fromhex('302a300506032b6570032100')+base64.b64decode('Ehk536ED2OKI5bvDKUWlgKXjgOw8LCCK3K5qR/rQM0c='))
+ signature=(root/'manifest.sig').read_bytes();assert len(signature)==64;(p/'sig').write_bytes(signature)
+ subprocess.run(['openssl','pkeyutl','-verify','-pubin','-inkey',str(p/'public.der'),'-keyform','DER','-rawin','-in',str(root/'manifest.json'),'-sigfile',str(p/'sig')],check=True,stdout=subprocess.DEVNULL)
  for name,metadata in manifest['assets'].items():
   data=(root/name).read_bytes();assert len(data)==metadata['length'] and 0<len(data)<100_000_000
   assert hashlib.sha256(data).hexdigest()==metadata['sha256']

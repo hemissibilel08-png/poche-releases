@@ -39,11 +39,11 @@ jobs:
 
           Magic Links : activez une fois le partage avec le fichier `.poche-access` remis séparément par Bilel. Le quota de **8 Go est partagé** avec le Mac et les autres testeurs, moins de 1 Go par envoi. Expiration, mot de passe et usage unique sont disponibles. Aucun accès de stockage n’est intégré à l’exe public.
 
-          Les sources restent privées. Bêta sans signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Les mises à jour Windows se téléchargent depuis le menu ; l’installation automatique n’est pas encore incluse dans ce client.
+          Les sources restent privées. Bêta sans signature Authenticode commerciale : Windows peut afficher un avertissement de réputation. Les mises à jour sont désormais automatiques : téléchargement en arrière-plan, signature Ed25519 vérifiée, remplacement de l’exe après inactivité et restauration de l’ancienne version si le redémarrage échoue. Les données et l’accès Magic Links sont conservés. Les versions beta.1/beta.2 nécessitent ce dernier téléchargement manuel pour activer le mécanisme.
 
           Compilation et tests sur un runner Windows. Le rendu fourni est généré par WPF avec des fichiers artificiels ; les gestes réels et les écrans doivent être validés sur les PC des testeurs.
           NOTES
-            gh release create "$TAG" incoming-windows/Poche-Windows-x64.exe incoming-windows/Poche-Windows-x64.exe.sha256 incoming-windows/LISEZ-MOI-Windows.txt incoming-windows/Poche-Windows-apercu.png --target "$GITHUB_SHA" --title "Poche Windows $VERSION" --notes-file "$RUNNER_TEMP/notes.md" --prerelease --latest=false
+            gh release create "$TAG" incoming-windows/Poche-Windows-x64.exe incoming-windows/Poche-Windows-x64.exe.sha256 incoming-windows/LISEZ-MOI-Windows.txt incoming-windows/Poche-Windows-apercu.png incoming-windows/manifest.json incoming-windows/manifest.sig --target "$GITHUB_SHA" --title "Poche Windows $VERSION" --notes-file "$RUNNER_TEMP/notes.md" --prerelease --latest=false
           fi
           gh release download "$TAG" --pattern Poche-Windows-x64.exe --dir "$RUNNER_TEMP/downloaded"
           cmp incoming-windows/Poche-Windows-x64.exe "$RUNNER_TEMP/downloaded/Poche-Windows-x64.exe"
