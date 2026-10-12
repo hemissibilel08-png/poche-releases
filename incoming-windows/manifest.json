@@ -1,23 +1,23 @@
 {
-  "version": "0.1.0-beta.6",
-  "tag": "windows-v0.1.0-beta.6",
-  "build": 6,
-  "source": "918bbf96b4da68ddd588f0e7d7d4fedb1ac624c0",
+  "version": "0.1.0-beta.7",
+  "tag": "windows-v0.1.0-beta.7",
+  "build": 7,
+  "source": "ad8250adfe935e031c919e032347c8a373591050",
   "assets": {
     "Poche-Windows-x64.exe": {
-      "length": 78079174,
-      "sha256": "82778b06a5897af1d1754b97b2de990b0a19d845f38d92cceabebf921a9f6047",
-      "signature": "qkEcWHtdD69dlmCUp0gPm/BOrDwtwfs9VPzhejXycGziFHgGAnzeQ1UcKGe+Mz5bL3mh/Bv4qUk6aL2J/dWPBg=="
+      "length": 78093898,
+      "sha256": "5fe4beb29951b295220816128780339c8a38b19682e767f760267985861402d0",
+      "signature": "1YNmYsGIueDcv2mhMBA/fZZ90DnhP03DrxMl2ITdJOvqrKdvPqRvEWaekkFXWmfVmtiLK+c0Kt/yob03CsctBQ=="
     },
     "LISEZ-MOI-Windows.txt": {
-      "length": 4407,
-      "sha256": "ee1022b578ded38abb20918160756436d35ae20cba95cfe38ad372dd0ac900c6",
-      "signature": "EaWUS+YicjsxiUYXDVz7KeFIq0Xh/3yrdXXlTZpwpQ3vkFKjABSxysq5c19d0Mt97e+yNryneENs2EGRxQY/Cw=="
+      "length": 4686,
+      "sha256": "ece3a4cbbd9426a8591fd71a965e973150903630055ebafad82d261a05b4c6d4",
+      "signature": "mj5t0Z8IFk9Ct08XibZEC/VzRlflbeMDISlEnt9ip/kZywULU14zBTtR4iFOoVsnfzLqDtNYfj/0QKqmqIDKAA=="
     },
     "Poche-Windows-apercu.png": {
-      "length": 56889,
-      "sha256": "94a396bde3de1ee5369c7e0c0ea120e01b0cba48b57ff5e8e3913066c9a4e524",
-      "signature": "q0SoeCB2eVGvdNbG3Km/wHT2TYoU2IXC766SfSuMaftvMhYsqpdP8152SIyzfhftvIrMKPYbgWCcMKIIfqJkBw=="
+      "length": 55177,
+      "sha256": "118ce961ea6cebac956605f4bf012c3f81cb680f77f6314db9ed65ea22e134a6",
+      "signature": "/EVDgc1J+PxYS5ab5CUXb/UU+RhSmX4qeB26gS9PHTcqR3ac2nQm1lHRVYYx9Mfg/Yi12hwbOV1LvkvBDQf2Cw=="
     }
   }
 }
